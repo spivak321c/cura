@@ -1,0 +1,58 @@
+{
+  "name": "discount-platform-tests",
+  "version": "1.0.0",
+  "description": "Test suite for Discount Platform Solana program",
+  "scripts": {
+    "test": "anchor test",
+    "test:unit": "ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.test.ts",
+    "test:merchant": "ts-mocha -p ./tsconfig.json -t 1000000 tests/test_merchant.ts",
+    "test:promotion": "ts-mocha -p ./tsconfig.json -t 1000000 tests/test_promotion.ts",
+    "test:coupon": "ts-mocha -p ./tsconfig.json -t 1000000 tests/test_coupon.ts",
+    "test:marketplace": "ts-mocha -p ./tsconfig.json -t 1000000 tests/test_marketplace_listing.ts",
+    "test:market": "ts-mocha -p ./tsconfig.json -t 1000000 tests/test_marketplace.ts",
+    "test:rating": "ts-mocha -p ./tsconfig.json -t 1000000 tests/test_rating.ts",
+    "test:comment": "ts-mocha -p ./tsconfig.json -t 1000000 tests/test_comment.ts",
+    "test:badge": "ts-mocha -p ./tsconfig.json -t 1000000 tests/test_badge.ts",
+    "test:external": "ts-mocha -p ./tsconfig.json -t 1000000 tests/test_external_deal.ts",
+    "test:integration": "ts-mocha -p ./tsconfig.json -t 1000000 tests/test_integration.ts",
+    "test:staking": "ts-mocha -p ./tsconfig.json -t 1000000 tests/test_staking.ts",
+    "test:stats": "ts-mocha -p ./tsconfig.json -t 1000000 tests/test_user_stats.ts",
+    "test:groupdeals": "ts-mocha -p ./tsconfig.json -t 1000000 tests/test_group_deals.ts",
+    "test:auctions": "ts-mocha -p ./tsconfig.json -t 1000000 tests/test_auctions.ts",
+     "test:redemption": "ts-mocha -p ./tsconfig.json -t 1000000 tests/test_redemption_tickets.ts",
+    "test:autobadge": "ts-mocha -p ./tsconfig.json -t 1000000 tests/test_auto_badge.ts",
+
+
+
+     "devnet:test": "anchor test --skip-local-validator --skip-build --skip-deploy --provider.cluster devnet",
+    "devnet:test:merchant": "anchor test --skip-local-validator --skip-build --skip-deploy --provider.cluster devnet tests/test_merchant.ts",
+    "devnet:test:promotion": "anchor test --skip-local-validator --skip-build --skip-deploy --provider.cluster devnet tests/test_promotion.ts",
+    "devnet:test:coupon": "anchor test --skip-local-validator --skip-build --skip-deploy --provider.cluster devnet tests/test_coupon.ts",
+    "devnet:test:marketplace": "anchor test --skip-local-validator --skip-build --skip-deploy --provider.cluster devnet tests/test_marketplace_listing.ts",
+    "devnet:test:market": "anchor test --skip-local-validator --skip-build --skip-deploy --provider.cluster devnet tests/test_marketplace.ts",
+    "devnet:test:rating": "anchor test --skip-local-validator --skip-build --skip-deploy --provider.cluster devnet tests/test_rating.ts",
+    "devnet:test:comment": "anchor test --skip-local-validator --skip-build --skip-deploy --provider.cluster devnet tests/test_comment.ts",
+    "devnet:test:badge": "anchor test --skip-local-validator --skip-build --skip-deploy --provider.cluster devnet tests/test_badge.ts",
+    "devnet:test:external": "anchor test --skip-local-validator --skip-build --skip-deploy --provider.cluster devnet tests/test_external_deal.ts",
+    "devnet:test:integration": "anchor test --skip-local-validator --skip-build --skip-deploy --provider.cluster devnet tests/test_integration.ts",
+    "devnet:test:staking": "anchor test --skip-local-validator --skip-build --skip-deploy --provider.cluster devnet tests/test_staking.ts",
+    "devnet:test:stats": "anchor test --skip-local-validator --skip-build --skip-deploy --provider.cluster devnet tests/test_user_stats.ts",
+    "devnet:test:autobadge": "anchor test --skip-local-validator --skip-build --skip-deploy --provider.cluster devnet tests/test_auto_badge.ts"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.31.0",
+    "@solana/spl-token": "^0.4.8",
+    "@solana/web3.js": "^1.95.0",
+    "dotenv": "^17.2.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.0",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^20.0.0",
+    "chai": "^4.3.6",
+    "mocha": "^9.2.0",
+    "ts-mocha": "^10.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.0"
+  }
+}
